@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" href="/styles/calculator.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&amp;family=Work+Sans:wght@500;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="/script/calculator.js"></script>
+  </head>
+  <body>
+    <h1>JavaScript Calculator</h1>
+    <section>
+      <span>Enter the first number: </span>
+      <input type="number" id="value1" />
+      <span>Enter the second number: </span>
+      <input type="number" id="value2" />
+      <br /><br />
+      <h2>Select the operation:</h2>
+      <p>
+        Enter the number corresponding to the desired operation (or just click
+        on the button):
+      </p>
+      <input type="number" id="option" />
+      <br /><br />
+      <button type="button" onclick="addition()">1) Adittion +</button>
+      <button type="button" onclick="subtraction()">2) Subtraction -</button>
+      <button type="button" onclick="multiplication()">
+        3) Multiplication *
+      </button>
+      <button type="button" onclick="division()">4) Division /</button>
+      <br /><br />
+      <button type="button" onclick="result()">Result</button>
+      <button type="button" onclick="reset()">Reset</button>
+      <p id="result"></p>
+    </section>
+  </body>
+</html>
