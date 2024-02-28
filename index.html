@@ -3,114 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Temperature</title>
+    <title>Temperature converter</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>JavaScript</h1>
-    <h2>Hello World</h2>
-    <script>
-      // alert("Hello World!");
-    </script>
-    <h2>Variables</h2>
-    <script>
-      var number = 10;
-      // let name = "Alexis";
-      const txt = "<h2 style='color:blue;'>Name: " + name + "</h2>";
-
-      document.write(txt);
-    </script>
-    <h2>Math operators</h2>
-    <script>
-      let num1 = 10;
-      let num2 = 5;
-
-      document.writeln(num1 + num2 + "</br>");
-      document.writeln(num1 - num2 + "</br>");
-      document.writeln(num1 * num2 + "</br>");
-      document.writeln(num1 / num2);
-    </script>
-    <h2>Ralational and local operators</h2>
-    <script>
-      let comparison1 = 10 == 10 && 5 == 6;
-      let comparison2 = 10 == 10 || 5 == 6;
-
-      document.writeln(comparison1);
-      document.write(comparison2);
-    </script>
-    <h2>Reading and writing</h2>
-    <script>
-      // let userName = prompt("Enter your name");
-
-      if (userName == "Alexis") {
-        document.write("Welcome to the system, " + userName);
-      } else {
-        document.write("Invalid username");
-      }
-    </script>
-    <h2>If-else statement</h2>
-    <script>
-      if (5 > 4) {
-        document.write("Yes, the condition is true");
-      } else {
-        document.write("No, the condition is false");
-      }
-
-      let op = prompt("Enter an option: 1)Hello 2)Goodbye");
-
-      if (op == 1) {
-        console.log("Hello");
-      } else if (op == 2) {
-        console.log("Goodbye");
-      }
-    </script>
-    <h2>In-class exercise</h2>
-    <script>
-      let name = "Alexis";
-      let email = "email@hotmail.com";
-      let password = "ThisIsAPassword123";
-      let age = 21;
-      let country = "México";
-      let salary = 4800;
-
-      console.log(
-        "My name is " +
-          name +
-          ", my email is " +
-          email +
-          " and my password is " +
-          password +
-          ". I am " +
-          age +
-          " years old and I live in " +
-          country +
-          ". My yearly salary is " +
-          salary * 12 +
-          " pesos."
-      );
-
-      document.write(
-        "My name is " +
-          name +
-          ", my email is " +
-          email +
-          "and my yearly salary is " +
-          salary * 12 +
-          " pesos."
-      );
-
-      document.write(`
-        <p>Name: ${name}</p>
-        <p>Email: ${email}</p>
-        <p>Salary(yearly): ${salary * 12}</p>
-      `);
-
-      let bYear = 2002;
-      let year = prompt("Enter a year");
-      let futureAge = year - bYear;
-
-      document.write(`
-        <p>I will be either ${futureAge} or ${futureAge - 1} in ${year}</p>
-      `);
-    </script>
+    <div class="container">
+      <p class="icons">🌤️⛅🌤️</p>
+      <h1>Convert Celsius to Fahrenheit</h1>
+      <button class="poppins-medium" onclick="convert()">
+        Convert Celsius to Fahrenheit
+      </button>
+      <p class="display-none" id="result"></p>
+    </div>
+    <script src="/script/temperature.js"></script>
   </body>
 </html>
