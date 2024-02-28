@@ -2,7 +2,7 @@ let temperature = 0;
 let fahrenheit = 0;
 
 function convert() {
-  temperature = Number(prompt("Enter temperature in Celsius"));
+  temperature = Number(document.getElementById("temp").value);
 
   fahrenheit = (temperature * 9) / 5 + 32;
 
