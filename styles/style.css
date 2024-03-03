@@ -1,4 +1,8 @@
 /* Global */
+:root {
+  --final-height: 0%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,12 +22,30 @@ body {
 h1 {
   font-size: 2.5rem;
   color: rgb(59, 59, 59);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-input {
+h2 {
+  color: rgb(59, 59, 59);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+p {
+  padding: 0.5rem;
+}
+
+.simple input {
   font-family: "Poppins", sans-serif;
   border: 0;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+}
+.ranged input {
+  font-family: "Poppins", sans-serif;
+  border: 0;
+  width: 13rem;
   border-radius: 10px;
   margin-bottom: 1rem;
   padding: 0.8rem;
@@ -40,10 +62,6 @@ select {
 /* Utilites */
 .display-none {
   display: none;
-}
-
-.display-ib {
-  display: inline-block;
 }
 
 /* Font */
@@ -101,6 +119,10 @@ select {
   cursor: pointer;
 }
 
+.converter {
+  display: flex;
+}
+
 .icons {
   font-size: 7rem;
   letter-spacing: 1rem;
@@ -111,6 +133,84 @@ select {
   margin-top: 1rem;
   padding: 0.5rem;
   border-radius: 10px;
+}
+
+#result2 {
+  background-color: rgb(201, 200, 200);
+  height: 10rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+/* Thermometer */
+.thermo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5rem;
+}
+
+.thermo-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 8vh;
+  width: 4vw;
+  border-radius: 100%;
+}
+
+#base {
+  background-color: red;
+  border-radius: 100%;
+  width: 40%;
+  height: 40%;
+  animation: none;
+}
+
+.thermo-stick {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: white;
+  height: 35vh;
+  width: 2vw;
+  margin-bottom: -50px;
+  border-radius: 1rem;
+}
+
+#stick {
+  background-color: red;
+  border-radius: 1rem;
+  width: 10%;
+  height: 0%;
+  animation: none;
+}
+
+@keyframes animation {
+  0% {
+    height: 5%;
+    background-color: aqua;
+  }
+
+  100% {
+    height: var(--final-height);
+    background-color: red;
+  }
+}
+
+@keyframes base {
+  0% {
+    background-color: aqua;
+  }
+
+  100% {
+    background-color: red;
+  }
 }
 
 @media (max-width: 768px) {
@@ -128,5 +228,23 @@ select {
 
   input {
     width: 60%;
+  }
+
+  .thermo {
+    margin-left: 1rem;
+  }
+
+  .thermo-base {
+    height: 8vh;
+    width: 16vw;
+  }
+
+  .thermo-stick {
+    height: 35vh;
+    width: 7vw;
+  }
+
+  #stick {
+    width: 1%;
   }
 }

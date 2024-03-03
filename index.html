@@ -15,28 +15,63 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌤️</text></svg>"
     />
+    <script src="script/temperature.js"></script>
   </head>
   <body>
     <div class="container">
       <p class="icons">🌤️⛅🌤️</p>
       <h1>Convert Temperature</h1>
-      <div>
-        <input
-          type="number"
-          name="temp"
-          id="temp"
-          placeholder="Type the temperature"
-        />
-        <select name="scale" id="scale">
-          <option value="Celsius">°C</option>
-          <option value="Fahrenheit">°F</option>
-        </select>
+      <div class="converter">
+        <div>
+          <h2>Simple</h2>
+          <div class="simple">
+            <input
+              type="number"
+              name="temp"
+              id="temp"
+              placeholder="Type the temperature"
+            />
+            <select name="scale" id="scale">
+              <option value="Celsius">°C</option>
+              <option value="Fahrenheit">°F</option>
+            </select>
+          </div>
+          <button class="poppins-medium" onclick="convertTemp()">
+            Convert temperature
+          </button>
+          <h2>Ranged</h2>
+          <div class="ranged">
+            <input
+              type="number"
+              name="temp1"
+              id="temp1"
+              placeholder="Type the initial temperature"
+            />
+            <br />
+            <input
+              type="number"
+              name="temp2"
+              id="temp2"
+              placeholder="Type the final temperature"
+            />
+            <br />
+            <select name="scaleR" id="scaleR">
+              <option value="Celsius">°C</option>
+              <option value="Fahrenheit">°F</option>
+            </select>
+          </div>
+          <button class="poppins-medium" onclick="convertTempRange()">
+            Convert temperature
+          </button>
+          <br />
+        </div>
+        <div class="thermo" id="therm">
+          <div class="thermo-stick"><p id="stick"></p></div>
+          <div class="thermo-base"><p id="base"></p></div>
+        </div>
       </div>
-      <button class="poppins-medium" onclick="convertTemp()">
-        Convert temperature
-      </button>
       <p class="display-none" id="result"></p>
+      <p class="display-none" id="result2"></p>
     </div>
-    <script src="script/temperature.js"></script>
   </body>
 </html>
